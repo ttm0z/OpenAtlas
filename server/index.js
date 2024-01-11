@@ -78,7 +78,7 @@ app.post("/Login", async (req, res) => {
 	    }
 	}
 	else{
-	    res.json({message "No user with given username"})
+	    res.json({message, "No user with given username"})
 	}
     }
     catch(error){
