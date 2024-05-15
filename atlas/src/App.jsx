@@ -7,6 +7,7 @@ import GetUsers from './components/GetUsers'
 import Home from './components/Home'
 import NotFound from './components/Home'
 import Navbar from './components/Navbar'
+import MapDisplay from './components/MapDisplay'
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} /> {/* Render Home component when root path is matched */}
         <Route path="/getUsers" element={<GetUsers />} />
+        <Route path="/maps" element={<MapDisplay />} />
       </Routes>
     </BrowserRouter>
   )

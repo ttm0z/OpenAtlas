@@ -1,0 +1,34 @@
+.navbar {
+    background-color: #333; /* Set background color */
+    border-bottom: 2px solid #ccc; /* Add border */
+    position: fixed; /* Pin to top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Take full width */
+    padding: 10px 0; /* Add padding */
+    font-family: 'Arial', sans-serif; /* Use a cool font */
+  }
+  
+  .navbar-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make it horizontal */
+    justify-content: space-evenly; /* Even spacing */
+  }
+  
+  .navbar-item {
+    margin: 0;
+  }
+  
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #fff; /* Link color */
+    padding: 5px 10px; /* Add padding */
+  }
+  
+  .navbar-link:hover {
+    background-color: #555; /* Change background color on hover */
+  }
+  
