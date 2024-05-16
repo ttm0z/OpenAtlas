@@ -24,4 +24,22 @@ router.get('/map/:countryCode', async (req, res) => {
     }
 });
 
+router.get('/map/city/:countryName', async (req, res) => {
+    const { countryName } = req.params;
+    console.log(countryName)
+    try {
+        const city = mapService.getCapitalCity(countryName)        
+        const responseData = {
+            cityName: city
+        }
+        res.json(responseData);
+    }
+    catch (error) {
+        console.error('Error fetching map: ', error);
+        res.status(500).json({error: 'Error fetching data'});
+    }
+});
+
+
+
 module.exports = router;

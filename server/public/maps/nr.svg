@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+    
+<!--********* Copyright (c) 2024 Pareto Softare, LLC DBA Simplemaps.com ***************************************
+************* Free for Commercial Use, full terms at  https://simplemaps.com/resources/svg-license ************
+************* Attribution is appreciated! https://simplemaps.com *******************************************-->
+
+<svg baseprofile="tiny" fill="#6f9c76" height="1000" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" version="1.2" viewbox="0 0 1000 1000" width="1000" xmlns="http://www.w3.org/2000/svg">
+ <g id="features">
+  <path d="M478.8 88.8l112.7-43.3 2.6 203.7-115.3-160.4z" id="NR03" name="Anetan">
+  </path>
+  <path d="M478.8 88.8l115.3 160.4-13.9 93.8-191.2-219.7 89.8-34.5z" id="NR09" name="Ewa">
+  </path>
+  <path d="M389 123.3l191.2 219.7-6.9 46.5-5.1 42.2-283.6-268.2 104.4-40.2z" id="NR05" name="Baiti">
+  </path>
+  <path d="M284.6 163.5l283.6 268.2-6.5 54.5-345.9-296.3 68.8-26.4z" id="NR13" name="Uaboe">
+  </path>
+  <path d="M215.8 189.9l345.9 296.3-4 33.2-5.8 40.7-113.7-35.5-119.5-31.2-148.9-126.9 46-176.6z" id="NR12" name="Nibok">
+  </path>
+  <path d="M169.8 366.5l148.9 126.9-51.9 52-146.1 9.4 49.1-188.3z" id="NR08" name="Denigomodu">
+  </path>
+  <path d="M120.7 554.8l146.1-9.4-10.4 72.7 26 88.3-87.7 27.9-74-179.5z" id="NR01" name="Aiwo">
+  </path>
+  <path d="M194.7 734.3l87.7-27.9 32.2 55-27 22.9-28.4 106.4-64.5-156.4z" id="NR06" name="Boe">
+  </path>
+  <path d="M259.2 890.7l28.4-106.4 27-22.9 76.9-65.4 108.7 241-241-46.3z" id="NR14" name="Yaren">
+  </path>
+  <path d="M500.2 937l-108.7-241 150.6-67.5 145.5 36.4 116.8 16.4-27.5 85.4-185.4 187.8-91.3-17.5z" id="NR11" name="Meneng">
+  </path>
+  <path d="M580.2 343l13.9-93.8 114.3 67.6 158.1 38.1 12.8 93.9-74.9 232.5-116.8-16.4-145.5-36.4 9.8-68.4 5.8-40.7 4-33.2 6.5-54.5 5.1-42.2 6.9-46.5z" id="NR04" name="Anibare">
+  </path>
+  <path d="M866.5 354.9l-158.1-38.1-114.3-67.6 245.4-91.8 27 197.5z" id="NR10" name="Ijuw">
+  </path>
+  <path d="M594.1 249.2l-2.6-203.7 248 111.9-245.4 91.8z" id="NR02" name="Anabar">
+  </path>
+  <path d="M318.7 493.4l119.5 31.2 113.7 35.5-9.8 68.4-150.6 67.5-76.9 65.4-32.2-55-26-88.3 10.4-72.7 51.9-52z" id="NR07" name="Buada">
+  </path>
+ </g>
+ <g id="points">
+  <circle class="-0.5487810088180614|166.9095565112964" cx="158.7" cy="909.1" id="0">
+  </circle>
+  <circle class="-0.5242041877524253|166.93519127685772" cx="537.9" cy="545.5" id="1">
+  </circle>
+  <circle class="-0.4934831614203803|166.9556990893068" cx="841.3" cy="90.9" id="2">
+  </circle>
+ </g>
+ <g id="label_points">
+  <circle class="Anetan" cx="550.9" cy="117.2" id="NR03">
+  </circle>
+  <circle class="Ewa" cx="506.9" cy="197.9" id="NR09">
+  </circle>
+  <circle class="Baiti" cx="444.3" cy="257.4" id="NR05">
+  </circle>
+  <circle class="Uaboe" cx="397.3" cy="307.7" id="NR13">
+  </circle>
+  <circle class="Nibok" cx="334" cy="394.3" id="NR12">
+  </circle>
+  <circle class="Denigomodu" cx="207.1" cy="482.7" id="NR08">
+  </circle>
+  <circle class="Aiwo" cx="207.4" cy="630.5" id="NR01">
+  </circle>
+  <circle class="Boe" cx="250.9" cy="760.8" id="NR06">
+  </circle>
+  <circle class="Yaren" cx="365.6" cy="831" id="NR14">
+  </circle>
+  <circle class="Meneng" cx="588.2" cy="773.4" id="NR11">
+  </circle>
+  <circle class="Anibare" cx="708.6" cy="482.7" id="NR04">
+  </circle>
+  <circle class="Ijuw" cx="771.2" cy="257.5" id="NR10">
+  </circle>
+  <circle class="Anabar" cx="662.8" cy="150.6" id="NR02">
+  </circle>
+  <circle class="Buada" cx="380.2" cy="607.5" id="NR07">
+  </circle>
+ </g>
+</svg>

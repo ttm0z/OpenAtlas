@@ -1,11 +1,47 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Dropdown from './Dropdown';
 import Map from './Map'
 
-function Home(){
+function MapDisplay(){
 
-  const [selectedCountry, setSelectedCountry] = useState('');
+  const styles = {
+    container: {
+        display: 'flex',
+        alignItems: 'flex-start',
+    },
+    imageContainer: {
+        marginRight: '20px',
+    },
+    image: {
+        width: '300px',
+        height: '300px',
+        objectFit: 'cover',
+    },
+    infoBox: {
+        width: '300px',
+        height: 'auto',
+        border: '1px solid #ccc',
+        padding: '10px',
+        boxSizing: 'border-box',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+    },
+    infoContent: {
+        marginTop: '10px',
+        padding: '10px',
+    },
+};
+
+  const [countryCode, setCountryCode] = useState('')
+  const [map, setMap] = useState(null);
+  const [capitalCity, setCapitalCity] = useState('');
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [tooltipOption, setTooltipOption] = useState('');
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [mapData, setMapData] = useState(null);
+  
 
   const countryList = [
     { value: 'af', label: 'Afghanistan' },
@@ -205,27 +241,211 @@ function Home(){
     { value: 'zm', label: 'Zambia' },
     { value: 'zw', label: 'Zimbabwe'}
   ]
+  
+  const getMapFromCode = (countryCode) => {
+    fetch(`http://localhost:3001/api/map/${countryCode}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error retrieving map");
+            }
+            return response.json();
+        })
+        .then(data => {
+            setMap(data);
+        })
+        .catch(error => {
+            console.error("Could not fetch map data");
+        });
+  };
+
+  const getCapitalCity = (countryName) => {
+    fetch(`http://localhost:3001/api/map/city/${countryName}`)
+      .then(response => {
+        if(!response.ok) {
+          throw new Error("Error");
+        }
+        return response.json();
+      })
+      .then(data => {
+        setCapitalCity(data.cityName);
+      })
+      .catch(error => {
+        console.error("error");
+      });
+  };
 
   // send the selected country to the backend to generate the map
   const handleSelect = async(value) => {
     console.log('Selected value: ', value)
-    setSelectedCountry(value);
+    setCountryCode(value);
   }
+
+  const handleTooltipToggle = () => {
+    setShowTooltip(!showTooltip);
+  };
+
+  const handleOptionChange = (event) => {
+    const value = event.target.value;
+    if (selectedOptions.includes(value)) {
+        setSelectedOptions(selectedOptions.filter((option) => option !== value));
+    } else {
+        setSelectedOptions([...selectedOptions, value]);
+    }
+};
+  useEffect(() => {
+    if (countryCode) {
+        getMapFromCode(countryCode);
+    }
+}, [countryCode]);
+
+useEffect(() => {
+  if (map) {
+      getCapitalCity(map.name);
+  }
+}, [map]);
+
+
   
   return (
-        <>
-          <p>Home</p>
-          <Link to="/getUsers">
-            <button>Go to "Get Users"</button>
-          </Link>
+  <>
+    <h3 className="ViewerHeader">Country Viewer</h3>
+    
+    <div style={styles.container}>
+      
+      <div style={styles.imageContainer}>
+        
+        {map && (
+          <>
+            <h2>{map.name}</h2>
+              <img
+                src={`http://localhost:3001/maps/${countryCode}.svg`}
+                alt={map.name}
+                style={styles.image}
+              />
+          </>
+        )
+        }
+      </div>
 
-          <div className="CountryDropdown">
-            <h1>Select a Country</h1>
-            <Dropdown options = {countryList} onSelect={handleSelect}/>
-          </div>
+      <div style={styles.infoBox}>
+        
+        <div className="CountryDropdown">
+          <Dropdown options={countryList} onSelect={handleSelect} />
+        </div>
+        
+        <div className="infoContent">
+          <button onClick={handleTooltipToggle}>Map Options</button>
+            {showTooltip && (
+                <div style={{ position: 'absolute', zIndex: 1, background: '#000', padding: '10px' }}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="capital"
+                      checked={selectedOptions.includes('capital')}
+                      onChange={handleOptionChange}
+                    />
+                    Capital City
+                            
+                  </label>
+                  <br />
 
-          {selectedCountry && <Map countryCode={selectedCountry} />}
-        </>
+                          
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="population"
+                      checked={selectedOptions.includes('population')}
+                      onChange={handleOptionChange}
+                    />
+                    Population
+                          
+                  </label>
+                  <br />
+
+                  
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="avgTemp"
+                      checked={selectedOptions.includes('avgTemp')}
+                      onChange={handleOptionChange}
+                    />
+                    Yearly Average Temperature
+                          
+                  </label>
+                  <br />
+
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="Area"
+                      checked={selectedOptions.includes('Area')}
+                      onChange={handleOptionChange}
+                    />
+                    Area (km^2)
+                          
+                  </label>
+                  <br />
+                  
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="populationDensity"
+                      checked={selectedOptions.includes('populationDensity')}
+                      onChange={handleOptionChange}
+                    />
+                    Population Density
+                          
+                  </label>
+                  <br />
+
+                </div>
+              )}
+              
+            {selectedOptions.includes('capital') && (
+              <>
+                <p>Capital City: {capitalCity}</p>
+                  
+                {/* Additional info if needed */}
+
+              </>
+                        
+            )}
+                        
+            {selectedOptions.includes('population') && (
+              <>
+                  <p>Population: {map?.population}</p>
+                  {/* Additional info if needed */}
+              </>
+            )}
+            
+            {selectedOptions.includes('avgTemp') && (
+              <>
+                  <p>Average Yearly Temperature: {map?.population}</p>
+                  {/* Additional info if needed */}
+              </>
+            )}
+            
+            {selectedOptions.includes('Area') && (
+              <>
+                  <p>Area (km^2): {map?.population}</p>
+                  {/* Additional info if needed */}
+              </>
+            )}
+            
+            {selectedOptions.includes('populationDensity') && (
+              <>
+                  <p>Population Density: {map?.population}</p>
+                  {/* Additional info if needed */}
+              </>
+            )}
+
+
+            </div>
+        </div>
+    </div>
+</>
+
       )
 }
-export default Home;
+export default MapDisplay;

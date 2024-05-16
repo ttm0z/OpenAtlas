@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+    
+<!--********* Copyright (c) 2024 Pareto Softare, LLC DBA Simplemaps.com ***************************************
+************* Free for Commercial Use, full terms at  https://simplemaps.com/resources/svg-license ************
+************* Attribution is appreciated! https://simplemaps.com *******************************************-->
+
+<svg baseprofile="tiny" fill="#6f9c76" height="829" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" version="1.2" viewbox="0 0 1000 829" width="1000" xmlns="http://www.w3.org/2000/svg">
+ <g id="features">
+  <path d="M868.2 670.1l74.8 76.6 11.5 19.8-18.7 12.9-44.6 8.9-52.4 3.4-42.2-4-55.5-26.5-110-75.4-107.9-32.5-69.6-40.8-62.4-50.8-27-46.4-14.6-43.8-34.5-14.2-40.6-3.8-33-12.5-28-33.6-64.8-105.9-24.6-17.9-28.9-15.2-24.1-19.3-10-29.3 4.9-77.3-3.8-41-16.7-36.6 11.8-19.3 10.3-7.9 10.5 1.9 11.8 10.5 90.2 38.6 38.2 23.6 38.1 33.4 23.3 40.5 22 100.1 19.4 43.2 77.3 74 89.9 43.7 265.2 65.3 30.5 18.7 12.6 27.4 6.2 43.7 16.5 26.5 48.9 41.3z" id="CW" name="Curaçao">
+  </path>
+ </g>
+ <g id="points">
+  <circle class="12.058836234340767|-69.15014198001118" cx="90.9" cy="754" id="0">
+  </circle>
+  <circle class="12.198907820443011|-68.9341385617629" cx="545.5" cy="452.5" id="1">
+  </circle>
+  <circle class="12.373997303070817|-68.76133582716426" cx="909.1" cy="75.4" id="2">
+  </circle>
+ </g>
+ <g id="label_points">
+  <circle class="Curaçao" cx="574" cy="568.5" id="CW">
+  </circle>
+ </g>
+</svg>

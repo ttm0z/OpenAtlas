@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+    
+<!--********* Copyright (c) 2024 Pareto Softare, LLC DBA Simplemaps.com ***************************************
+************* Free for Commercial Use, full terms at  https://simplemaps.com/resources/svg-license ************
+************* Attribution is appreciated! https://simplemaps.com *******************************************-->
+
+<svg baseprofile="tiny" fill="#6f9c76" height="698" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" version="1.2" viewbox="0 0 1000 698" width="1000" xmlns="http://www.w3.org/2000/svg">
+ <g id="features">
+  <path d="M734.3 269.2l-29.6-29.7-43.8 17.4-31.6 22.8-7 27.2-18.1-4.4-8.3-19.8 20.1-48.5 54.8-39.3 53.1 4.3 11.9 38.5 38.4 14-39.9 17.5z m-32.5 29.8l32.5-29.8 26.6 43.8-33.9 23.3-25.2-37.3z m-109.7 34.8l9.2-10.4 16.2 5.3 18.2-1-32.2 27.7-11.4-21.6z" id="BMHAM" name="Hamilton">
+  </path>
+  <path d="M701.8 299l25.2 37.3-37.1 25.6-79.7 60.4-39.1-64.9 21-23.6 11.4 21.6 32.2-27.7 48.3-2.5 17.8-26.2z" id="BMSMI" name="Smith's">
+  </path>
+  <path d="M571.1 357.4l39.1 64.9-10.2 7.7-54.5 33-22.6 31.3-23.5-46-46 23.8-4.2-55.5 69.8-34 40.5-12.1 11.6-13.1z" id="BMDEV" name="Devonshire">
+  </path>
+  <path d="M449.2 416.6l4.2 55.5-20.6 2.4 0-30.6-35.8 4.4-2.7 30.8-41.4-17.5-32.7-47.6 11.9-16.2 117.1 18.8z" id="BMPEM" name="Pembroke">
+  </path>
+  <path d="M394.3 479.1l2.7-30.8 35.8-4.4 0 30.6-38.5 4.6z" id="BMHA" name="City of Hamilton">
+  </path>
+  <path d="M453.4 472.1l46-23.8 23.5 46-11.8 16.3-73.9 68.2-19.2 9.8-33.5-62.3 61.7-38.1 7.2-16.1z m-109.3 21l29.5 14-10.3 10.5-32.6-5.3 13.4-19.2z" id="BMPAG" name="Paget">
+  </path>
+  <path d="M384.5 526.3l33.5 62.3-79.9 40.9-22.5 8.7-21.1-34.4-46.5 9.9 14.7-31.4 35.5-3.5 63.6-38.5 22.7-14z m-40.4-33.2l-13.4 19.2-35.4 5.3-35.5-3.5-10.4-24.5 11.9-8.7 32.5 8.7 20.7-7 13.3-5.2 16.3 15.7z" id="BMWAR" name="Warwick">
+  </path>
+  <path d="M248 613.7l46.5-9.9 21.1 34.4-72.1 28-57.6-1.8-44.4-1.7-59.1-40.2-14.7-36.9 65-13.8-4.5 29.7 25.2 34.9 41.4 0 53.2-22.7z" id="BMSOU" name="Southampton">
+  </path>
+  <path d="M132.7 571.8l-65 13.8-10.4-26.1-11.8-48.9 35.7 16.5-5.2-32.3 13.1-43.4-20-44 28.1 10.5 13.3-26.2 17.7 26.2 23.7 24.5-34 29.7-10.7 51.1-8.5 15.4 19.2 15.7 69.5 8.7 0 14-54.7-5.2z" id="BMSAN" name="Sandys">
+  </path>
+  <path d="M734.3 269.2l39.9-17.5 65 24.5-78.3 36.8-26.6-43.8z m-10.4-70l-53.1-4.3 33.9-53.4 60.6-41.4 80.7-68.4 108.5 92.3-29.5 40.2-1.5 40.3-17.7-14-26.6-24.5-51.1-12.7-16.9 19.7-23.7-29.8-63.6 56z m118.7-82.2l32.4-20.2-13.7-30.4-34.1 22.3 15.4 28.3z" id="BMSGE" name="Saint George's">
+  </path>
+  <path d="M842.6 117l-15.4-28.3 34.1-22.3 13.7 30.4-32.4 20.2z" id="BMSG" name="City of Saint George">
+  </path>
+ </g>
+ <g id="points">
+  <circle class="32.255106398279345|-64.87407582787651" cx="90.9" cy="634.5" id="0">
+  </circle>
+  <circle class="32.311338625977335|-64.75489417790986" cx="545.5" cy="380.8" id="1">
+  </circle>
+  <circle class="32.38162891059982|-64.65954885793654" cx="909.1" cy="63.5" id="2">
+  </circle>
+ </g>
+ <g id="label_points">
+  <circle class="Hamilton" cx="677.5" cy="222.9" id="BMHAM">
+  </circle>
+  <circle class="Smith's" cx="638" cy="364.4" id="BMSMI">
+  </circle>
+  <circle class="Devonshire" cx="529.7" cy="423.5" id="BMDEV">
+  </circle>
+  <circle class="Pembroke" cx="373.2" cy="437.3" id="BMPEM">
+  </circle>
+  <circle class="City of Hamilton" cx="414.2" cy="461.5" id="BMHA">
+  </circle>
+  <circle class="Paget" cx="449.2" cy="524.5" id="BMPAG">
+  </circle>
+  <circle class="Warwick" cx="344.6" cy="588.4" id="BMWAR">
+  </circle>
+  <circle class="Southampton" cx="239.9" cy="641.6" id="BMSOU">
+  </circle>
+  <circle class="Sandys" cx="113" cy="441.5" id="BMSAN">
+  </circle>
+  <circle class="Saint George's" cx="805.3" cy="115.9" id="BMSGE">
+  </circle>
+  <circle class="City of Saint George" cx="851.5" cy="92.1" id="BMSG">
+  </circle>
+ </g>
+</svg>

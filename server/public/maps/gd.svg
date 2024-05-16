@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+    
+<!--********* Copyright (c) 2024 Pareto Softare, LLC DBA Simplemaps.com ***************************************
+************* Free for Commercial Use, full terms at  https://simplemaps.com/resources/svg-license ************
+************* Attribution is appreciated! https://simplemaps.com *******************************************-->
+
+<svg baseprofile="tiny" fill="#6f9c76" height="1000" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" version="1.2" viewbox="0 0 1000 1000" width="1000" xmlns="http://www.w3.org/2000/svg">
+ <g id="features">
+  <path d="M370.3 915.7l-10.7 9.7-6.9 12.9-2.5 16.2-15.7-2.9-15.2-4.7-14.3-6.5-13.3-8.2-17.5 15.3-28.6 6.1-31.3-1.6-25.3-7 58.5-37.7 10.7-10.5 5.9-25.2-4.8-20.2-8.3-19.8-4.5-23.6 9.1-38.4 59.1 0.1 49.9-1.5 8.3 34.1 8.3 11.3-22.2 7.1-11 38.3 0 29.8 12.4 19.8 9.9 7.1z" id="GD03" name="Saint George">
+  </path>
+  <path d="M370.3 915.7l-9.9-7.1-12.4-19.8 0-29.8 11-38.3 22.2-7.1 30.5-8.5 26.4 11.4 30.8 23.9-2 13.5-0.6 14.1-9.3 15.4-72.3 38 0-12.8-14.4 7.1z" id="GD02" name="Saint David">
+  </path>
+  <path d="M381.2 813.6l-8.3-11.3-8.3-34.1-2.8-18.4 19.4-24.1 23.6-39.7 11.1-35.5 41.6 0 47.3 4.3-5.2 74-4.1 12.1-7.4 11.9-11.2 26.4 0.5 13.4 9.5 28.2-4.3 5.4-8.7 4-5 10.2-30.8-23.9-26.4-11.4-30.5 8.5z" id="GD01" name="Saint Andrew">
+  </path>
+  <path d="M504.8 654.8l-47.3-4.3-41.6 0-5.5-35.5-16.7-24.1-21.9-16.6 18-21.9 35.3-6.4 38.5 5.2 36.5 23.1-1.1 5.3-10.6 10.1 14.1 29.3 3.1 25-0.8 10.8z" id="GD06" name="Saint Patrick">
+  </path>
+  <path d="M415.9 650.5l-11.1 35.5-25-19.9-31.8-15.6-31.9-8.2 55.7-68 21.9 16.6 16.7 24.1 5.5 35.5z" id="GD05" name="Saint Mark">
+  </path>
+  <path d="M364.6 768.2l-49.9 1.5-59.1-0.1 35-67.6 1.1-29.9 24.4-29.8 31.9 8.2 31.8 15.6 25 19.9-23.6 39.7-19.4 24.1 2.8 18.4z" id="GD04" name="Saint John">
+  </path>
+  <path d="M800.1 175.1l-29.7-8.9-28.4 8.1-28.2 14.5-28.6 11 5.8-10.6 11.3-27.2 5.8-10.5-5.2-0.9-17.7 0.9 2.4-6.9 10-16.7 36.4 11.1 21.8-29.8 18.3-41 26-22.7 10.9 28.2-2.9 31.4-6.9 34.2-1.1 35.8z" id="GD10" name="Carriacou and Petite Martinique">
+  </path>
+ </g>
+ <g id="points">
+  <circle class="12.029179181335113|-61.77207190704684" cx="220.1" cy="909.1" id="0">
+  </circle>
+  <circle class="12.239937625865874|-61.58762366571337" cx="531.1" cy="545.7" id="1">
+  </circle>
+  <circle class="12.503385681529325|-61.4400650726466" cx="779.9" cy="91" id="2">
+  </circle>
+ </g>
+ <g id="label_points">
+  <circle class="Saint George" cx="302.3" cy="858.7" id="GD03">
+  </circle>
+  <circle class="Saint David" cx="403.7" cy="859.4" id="GD02">
+  </circle>
+  <circle class="Saint Andrew" cx="437.4" cy="737.5" id="GD01">
+  </circle>
+  <circle class="Saint Patrick" cx="447.4" cy="595.9" id="GD06">
+  </circle>
+  <circle class="Saint Mark" cx="375.6" cy="625.3" id="GD05">
+  </circle>
+  <circle class="Saint John" cx="337.2" cy="704" id="GD04">
+  </circle>
+  <circle class="Carriacou and Petite Martinique" cx="771.5" cy="135" id="GD10">
+  </circle>
+ </g>
+</svg>
