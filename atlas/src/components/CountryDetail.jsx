@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import MapComponent from './InteractiveMap';
 
 function CountryDetail() {
   const { countryName } = useParams();
@@ -35,12 +36,17 @@ function CountryDetail() {
   }
 
   return (
+    <>
     <div>
       <h1>{countryData.title}</h1>
       <img src={countryData.thumbnail?.source} alt={countryData.title} />
       <p>{countryData.extract}</p>
       <a href={countryData.content_urls.desktop.page} target="_blank" rel="noopener noreferrer">Read more on Wikipedia</a>
     </div>
+    <div>
+    <MapComponent country = {countryName}/>
+    </div>
+    </>
   );
 }
 

@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} /> {/* Render Home component when root path is matched */}
         <Route path="/getUsers" element={<GetUsers />} />
+        <Route path="" />
         <Route path="/maps" element={<MapDisplay />} />
         <Route path="/country/:countryName" element = {<CountryDetail />} />
       </Routes>

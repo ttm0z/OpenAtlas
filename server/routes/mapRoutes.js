@@ -25,6 +25,30 @@ router.get('/map/:countryCode', async (req, res) => {
     }
 });
 
+// get map by country name
+router.get('/map/getByCountry/:country', async (req, res) => {
+    const { name } = req.params;
+    const countryName = req.params.country;
+    console.log("params: ", req.params);
+    console.log("country: ", countryName);
+    try {
+        const map = await mapService.getSVGByCountryName(countryName);
+        console.log("map: ", map);
+        
+        const imageBuffer = fs.readFileSync(map);
+        const imageBase64 = imageBuffer.toString('base64');
+        const responseData = {
+            imageData: imageBase64,
+        }
+        res.json(responseData);
+    }
+    catch (error) {
+        console.error('Error fetching map: ', error);
+        res.status(500).json({error: 'Error fetching data'});
+    }
+});
+
+
 router.get('/map/city/:countryName', async (req, res) => {
     const { countryName } = req.params;
     console.log(countryName)

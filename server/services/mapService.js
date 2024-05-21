@@ -399,11 +399,23 @@ const countryNameMap = {
   "ZW": "Zimbabwe"
 };
 
+const countryCodeMap = Object.fromEntries(
+  Object.entries(countryNameMap).map(([code, name]) => [name, code])
+);
+
+
 const cities = require('../node_modules/country-json/src/country-by-capital-city.json');
 const population = require('../node_modules/country-json/src/country-by-population.json');
 const density = require('../node_modules/country-json/src/country-by-population-density.json');
 const area = require('../node_modules/country-json/src/country-by-surface-area.json');
 const temp = require('../node_modules/country-json/src/country-by-yearly-average-temperature.json');
+
+
+async function getSVGByCountryName(countryName){
+  const countryCode = countryCodeMap[countryName];
+  const svgpath = countryMap[countryCode]
+  return svgpath;
+}
 
 // Function to retrieve map image from country code
 // works
@@ -462,5 +474,6 @@ function getTemp(countryName) {
 module.exports = {
   getMapByCountryCode,
   getCapitalCity,
-  constructCountryData
+  constructCountryData,
+  getSVGByCountryName
 };
