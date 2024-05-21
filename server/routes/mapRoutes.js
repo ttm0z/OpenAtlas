@@ -3,6 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 
 const mapService = require('../services/mapService');
+const { count } = require('console');
 
 // get map by country code
 router.get('/map/:countryCode', async (req, res) => {
@@ -39,6 +40,24 @@ router.get('/map/city/:countryName', async (req, res) => {
         res.status(500).json({error: 'Error fetching data'});
     }
 });
+
+router.get('/map/getData/:countryName', async (req, res) => {
+    console.log("Map data request recieved")
+    console.log("request: ", req.params)
+
+    const { countryName } = req.params;
+    console.log("countryName: ", countryName)
+    
+
+    try{
+        const responseData = mapService.constructCountryData(countryName);
+        res.json(responseData)
+    }
+    catch(error) {
+        console.error('Error fetching map: ', error);
+        res.status(500).json({error: 'Error fetching data'});
+    }
+})
 
 
 

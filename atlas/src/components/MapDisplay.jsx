@@ -35,7 +35,7 @@ function MapDisplay(){
 };
 
   const [countryCode, setCountryCode] = useState('')
-  const [map, setMap] = useState(null);
+  const [map, setMap] = useState("");
   const [capitalCity, setCapitalCity] = useState('');
   const [showTooltip, setShowTooltip] = useState(false);
   const [tooltipOption, setTooltipOption] = useState('');
@@ -274,6 +274,23 @@ function MapDisplay(){
       });
   };
 
+
+  const getCountryData = (countryName) => {
+    fetch(`http://localhost:3001/api/map/getData/${countryName}`)
+      .then(response => {
+        if(!response.ok) {
+          throw new Error("Error");
+        }
+        return response.json();
+      })
+      .then(data => {
+        setMapData(data)
+      })
+      .catch(error => {
+        console.error("error");
+      });
+  };
+
   // send the selected country to the backend to generate the map
   const handleSelect = async(value) => {
     console.log('Selected value: ', value)
@@ -301,8 +318,15 @@ function MapDisplay(){
 useEffect(() => {
   if (map) {
       getCapitalCity(map.name);
+      getCountryData(map.name);
   }
 }, [map]);
+
+useEffect(() => {
+  if(selectedOptions){
+    getCountryData(map.name);
+  }
+}, [selectedOptions])
 
 
   
@@ -414,28 +438,28 @@ useEffect(() => {
                         
             {selectedOptions.includes('population') && (
               <>
-                  <p>Population: {map?.population}</p>
+                  <p>Population: {mapData.population}</p>
                   {/* Additional info if needed */}
               </>
             )}
             
             {selectedOptions.includes('avgTemp') && (
               <>
-                  <p>Average Yearly Temperature: {map?.population}</p>
+                  <p>Average Yearly Temperature: {mapData.temp} degrees C</p>
                   {/* Additional info if needed */}
               </>
             )}
             
             {selectedOptions.includes('Area') && (
               <>
-                  <p>Area (km^2): {map?.population}</p>
+                  <p>Area (km^2): {mapData.area} sq. km</p>
                   {/* Additional info if needed */}
               </>
             )}
             
             {selectedOptions.includes('populationDensity') && (
               <>
-                  <p>Population Density: {map?.population}</p>
+                  <p>Population Density: {mapData.density} people / sq. km</p>
                   {/* Additional info if needed */}
               </>
             )}
@@ -444,6 +468,9 @@ useEffect(() => {
             </div>
         </div>
     </div>
+    <Link to={`/country/${map.name}`}>
+        <button>View Detailed page for {map.name}</button>
+    </Link>
 </>
 
       )

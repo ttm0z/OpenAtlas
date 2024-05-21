@@ -400,16 +400,19 @@ const countryNameMap = {
 };
 
 const cities = require('../node_modules/country-json/src/country-by-capital-city.json');
+const population = require('../node_modules/country-json/src/country-by-population.json');
+const density = require('../node_modules/country-json/src/country-by-population-density.json');
+const area = require('../node_modules/country-json/src/country-by-surface-area.json');
+const temp = require('../node_modules/country-json/src/country-by-yearly-average-temperature.json');
 
 // Function to retrieve map image from country code
+// works
 async function getMapByCountryCode(countryCode) {
-  console.log("code in: ", countryCode)
   try{
     countryData = {
       "title" : countryNameMap[countryCode],
       "svgPath" : countryMap[countryCode]
     }
-    console.log("svg path:", countryData.svgPath)
     return countryData;
   }
   catch(error){
@@ -417,8 +420,17 @@ async function getMapByCountryCode(countryCode) {
   }
 }
 
-function constructCountryData(countryName, requestedData) {
-
+function constructCountryData(requestedData) {
+  country = requestedData;
+  data = {
+    city : getCapitalCity(country),
+    population : getPopulation(country),
+    density : getDensity(country),
+    area : getArea(country),
+    temp : getTemp(country)
+  }
+  console.log("constructed country data: ", data)
+  return data;
 }
 
 function getCapitalCity(countryName) {
@@ -426,7 +438,29 @@ function getCapitalCity(countryName) {
   return entry ? entry.city : null;
 }
 
+function getPopulation(countryName) {
+  const entry = population.find(country => country.country.toLowerCase() === countryName.toLowerCase());
+  return entry ? entry.population : null;
+}
+
+function getDensity(countryName) {
+  const entry = density.find(country => country.country.toLowerCase() === countryName.toLowerCase());
+  return entry ? entry.density : null;
+}
+
+function getArea(countryName) {
+  const entry = area.find(country => country.country.toLowerCase() === countryName.toLowerCase());
+  return entry ? entry.area : null;
+}
+
+function getTemp(countryName) {
+  const entry = temp.find(country => country.country.toLowerCase() === countryName.toLowerCase());
+  return entry ? entry.temperature : null;
+}
+
+
 module.exports = {
   getMapByCountryCode,
-  getCapitalCity
+  getCapitalCity,
+  constructCountryData
 };
