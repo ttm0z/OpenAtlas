@@ -468,7 +468,7 @@ useEffect(() => {
             </div>
         </div>
     </div>
-    <Link to={`/country/${map.name}`}>
+    <Link to={`/country/${countryCode.toUpperCase()}`}>
         <button>View Detailed page for {map.name}</button>
     </Link>
 </>

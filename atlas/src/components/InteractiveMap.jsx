@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { ReactSVGPanZoom, TOOL_AUTO, fitSelection } from 'react-svg-pan-zoom';
 
 const InteractiveMap = () => {
+  const { countryCode } = useParams();
   const [svgData, setSvgData] = useState(null);
   const [value, setValue] = useState(null);
 
   useEffect(() => {
     // Fetch SVG data from backend
-    fetch("http://localhost:3001/maps/ca.svg")
+    fetch(`http://localhost:3001/maps/${countryCode}.svg`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch SVG data');
@@ -17,7 +19,7 @@ const InteractiveMap = () => {
       .then(svg => {
         setSvgData(svg);
         // Fit SVG to viewer on initial load
-        const nextValue = fitSelection(600, 400, 0, 0, 600, 400);
+        const nextValue = fitSelection(600, 600, 0, 0, 600, 600);
         setValue(nextValue);
       })
       .catch(error => {
@@ -41,7 +43,7 @@ const InteractiveMap = () => {
       {svgData ? (
         <ReactSVGPanZoom
           width={600}
-          height={400}
+          height={600}
           tool={TOOL_AUTO}
           value={value}
           onChangeValue={setValue}
@@ -51,7 +53,7 @@ const InteractiveMap = () => {
           onPan={() => console.log("pan")}
           onClick={handleClick}
         >
-          <ReactSVGPanZoom.SVG width={600} height={400} style={{ background: '#f0f0f0' }}>
+          <ReactSVGPanZoom.SVG width={600} height={600} style={{ background: '#f0f0f0' }}>
             <g dangerouslySetInnerHTML={{ __html: svgData }} />
           </ReactSVGPanZoom.SVG>
         </ReactSVGPanZoom>

@@ -23,7 +23,7 @@ function App() {
         <Route path="/getUsers" element={<GetUsers />} />
         <Route path="" />
         <Route path="/maps" element={<MapDisplay />} />
-        <Route path="/country/:countryName" element = {<CountryDetail />} />
+        <Route path="/country/:countryCode" element = {<CountryDetail />} />
         <Route path="/interactiveMap" element = {<InteractiveMap />} />
       </Routes>
     </BrowserRouter>
