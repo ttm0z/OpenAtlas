@@ -445,7 +445,7 @@ useEffect(() => {
             
             {selectedOptions.includes('avgTemp') && (
               <>
-                  <p>Average Yearly Temperature: {mapData.temp} degrees C</p>
+                  <p>Average Yearly Temperature: {mapData.temp} C</p>
                   {/* Additional info if needed */}
               </>
             )}

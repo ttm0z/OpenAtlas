@@ -19,6 +19,9 @@ function Navbar() {
           <Link to="/signup" className="navbar-link">Sign Up</Link>
         </li>
         <li className="navbar-item">
+          <Link to="/interactiveMap" className="navbar-link">Map Test</Link>
+        </li>
+        <li className="navbar-item">
           <Link to="/login" className="navbar-link">Login</Link>
         </li>
         <li className="navbar-item">

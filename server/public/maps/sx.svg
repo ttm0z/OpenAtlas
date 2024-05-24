@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+    
+<!--********* Copyright (c) 2024 Pareto Softare, LLC DBA Simplemaps.com ***************************************
+************* Free for Commercial Use, full terms at  https://simplemaps.com/resources/svg-license ************
+************* Attribution is appreciated! https://simplemaps.com *******************************************-->
+
+<svg baseprofile="tiny" fill="#6f9c76" height="446" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" version="1.2" viewbox="0 0 1000 446" width="1000" xmlns="http://www.w3.org/2000/svg">
+ <g id="features">
+  <path d="M152.1 20.3l189.5 34 612.9 237.1-117.1 134.8-601.4-159-130.3-66.8-60.2-79.9 106.6-75.2 0-25z" id="SX" name="Sint Maarten">
+  </path>
+ </g>
+ <g id="points">
+  <circle class="18.02126075565911|-63.113820002737896" cx="90.9" cy="405.9" id="0">
+  </circle>
+  <circle class="18.038464575340395|-63.06316135896354" cx="545.5" cy="243.5" id="1">
+  </circle>
+  <circle class="18.059969349942|-63.02263444394406" cx="909.1" cy="40.6" id="2">
+  </circle>
+ </g>
+ <g id="label_points">
+  <circle class="Sint Maarten" cx="482.9" cy="220.7" id="SX">
+  </circle>
+ </g>
+</svg>

@@ -399,6 +399,205 @@ const countryNameMap = {
   "ZW": "Zimbabwe"
 };
 
+const countrySummaryMap = {
+  "AF": "Afghanistan is known for its rich cultural heritage and beautiful landscapes.",
+  "AL": "Albania boasts stunning Adriatic and Ionian coastlines and a vibrant history.",
+  "DZ": "Algeria is famed for its Sahara Desert landscapes and ancient ruins.",
+  "AS": "American Samoa is a tropical paradise with vibrant Polynesian culture.",
+  "AD": "Andorra offers breathtaking mountain views and excellent ski resorts.",
+  "AO": "Angola features diverse wildlife and rich cultural traditions.",
+  "AI": "Anguilla is known for its pristine beaches and crystal-clear waters.",
+  "AQ": "Antarctica is the world's southernmost continent, a land of ice and unique wildlife.",
+  "AG": "Antigua and Barbuda are famous for their beautiful beaches and clear waters.",
+  "AR": "Argentina is renowned for its tango music and dance, and diverse landscapes.",
+  "AM": "Armenia has a rich history, ancient monasteries, and beautiful mountainous scenery.",
+  "AW": "Aruba is a Caribbean island paradise known for its white-sand beaches.",
+  "AU": "Australia is famous for its unique wildlife, Great Barrier Reef, and Outback.",
+  "AT": "Austria is celebrated for its alpine landscapes, classical music, and vibrant culture.",
+  "AZ": "Azerbaijan is known for its blend of modern and ancient architecture, and rich cultural heritage.",
+  "BS": "The Bahamas are renowned for their stunning beaches and vibrant marine life.",
+  "BH": "Bahrain is a small island nation known for its rich history and modern skyline.",
+  "BD": "Bangladesh is known for its lush greenery and rich cultural traditions.",
+  "BB": "Barbados is a Caribbean gem known for its beautiful beaches and vibrant culture.",
+  "BY": "Belarus offers beautiful forests, lakes, and historic castles.",
+  "BE": "Belgium is famous for its medieval towns, Renaissance architecture, and delicious chocolate.",
+  "BZ": "Belize is known for its stunning barrier reef and rich marine biodiversity.",
+  "BJ": "Benin is rich in cultural heritage and home to vibrant traditional festivals.",
+  "BM": "Bermuda is famous for its pink-sand beaches and crystal-clear waters.",
+  "BT": "Bhutan is known for its breathtaking mountain scenery and Buddhist culture.",
+  "BO": "Bolivia offers diverse landscapes from the Andes to the Amazon Basin.",
+  "BA": "Bosnia and Herzegovina is known for its beautiful rivers and vibrant cultural heritage.",
+  "BW": "Botswana is celebrated for its wildlife and stunning natural reserves.",
+  "BR": "Brazil is famous for its lively culture, Carnival festival, and the Amazon rainforest.",
+  "BN": "Brunei is a wealthy nation known for its beautiful mosques and rich culture.",
+  "BG": "Bulgaria is known for its Black Sea beaches and historic monasteries.",
+  "BF": "Burkina Faso is rich in cultural traditions and known for its vibrant art scene.",
+  "BI": "Burundi is known for its beautiful landscapes and vibrant cultural traditions.",
+  "CV": "Cape Verde is known for its stunning islands and vibrant music scene.",
+  "KH": "Cambodia is famous for its ancient temples, including Angkor Wat.",
+  "CM": "Cameroon boasts diverse landscapes and rich cultural traditions.",
+  "CA": "Canada is renowned for its stunning natural beauty and welcoming multicultural society.",
+  "KY": "The Cayman Islands are known for their beautiful beaches and world-class diving spots.",
+  "CF": "The Central African Republic is rich in natural beauty and cultural diversity.",
+  "TD": "Chad is known for its dramatic landscapes and rich cultural heritage.",
+  "CL": "Chile is famous for its long coastline, Andean mountains, and vibrant culture.",
+  "CN": "China boasts a rich history, diverse landscapes, and vibrant cultural heritage.",
+  "CO": "Colombia is known for its beautiful landscapes, coffee, and vibrant music and dance.",
+  "KM": "Comoros is an island paradise known for its stunning beaches and volcanic landscapes.",
+  "CG": "Congo - Brazzaville is rich in cultural traditions and natural beauty.",
+  "CD": "Congo - Kinshasa is known for its vast rainforests and rich cultural heritage.",
+  "CR": "Costa Rica is renowned for its biodiversity, stunning beaches, and eco-tourism.",
+  "CI": "Côte d’Ivoire is known for its vibrant culture and beautiful coastal scenery.",
+  "HR": "Croatia boasts stunning Adriatic coastline and historic medieval towns.",
+  "CU": "Cuba is famous for its vibrant culture, music, and beautiful beaches.",
+  "CY": "Cyprus offers beautiful Mediterranean beaches and a rich cultural heritage.",
+  "CZ": "Czechia is known for its historic cities, beautiful architecture, and cultural traditions.",
+  "DK": "Denmark is celebrated for its high quality of life, design, and rich history.",
+  "DJ": "Djibouti boasts stunning landscapes and rich cultural traditions.",
+  "DM": "Dominica is known for its lush rainforests and beautiful waterfalls.",
+  "DO": "The Dominican Republic offers beautiful beaches and vibrant culture.",
+  "EC": "Ecuador is rich in biodiversity and home to the stunning Galápagos Islands.",
+  "EG": "Egypt is famous for its ancient pyramids, Nile River, and rich history.",
+  "SV": "El Salvador is known for its beautiful beaches and vibrant cultural traditions.",
+  "GQ": "Equatorial Guinea boasts lush rainforests and rich cultural heritage.",
+  "ER": "Eritrea is known for its stunning Red Sea coastline and cultural diversity.",
+  "EE": "Estonia is known for its digital advancements and beautiful medieval cities.",
+  "ET": "Ethiopia boasts a rich history, diverse landscapes, and vibrant culture.",
+  "FJ": "Fiji is a tropical paradise known for its stunning beaches and vibrant marine life.",
+  "FI": "Finland is celebrated for its beautiful lakes, forests, and high quality of life.",
+  "FR": "France is renowned for its culture, cuisine, art, and beautiful landscapes.",
+  "GA": "Gabon is rich in natural beauty with its rainforests and diverse wildlife.",
+  "GM": "The Gambia is known for its beautiful beaches and vibrant culture.",
+  "GE": "Georgia offers stunning mountain scenery and rich cultural heritage.",
+  "DE": "Germany is known for its rich history, cultural heritage, and beautiful landscapes.",
+  "GH": "Ghana is celebrated for its rich culture, history, and beautiful coastlines.",
+  "GR": "Greece is famous for its ancient history, beautiful islands, and vibrant culture.",
+  "GD": "Grenada is known as the 'Spice Isle' for its aromatic spice plantations and beautiful beaches.",
+  "GT": "Guatemala is rich in Mayan heritage and natural beauty.",
+  "GN": "Guinea boasts diverse landscapes and vibrant cultural traditions.",
+  "GW": "Guinea-Bissau is known for its beautiful islands and cultural heritage.",
+  "GY": "Guyana is rich in natural beauty with its rainforests and waterfalls.",
+  "HT": "Haiti is known for its vibrant culture, art, and history.",
+  "HN": "Honduras offers beautiful Caribbean beaches and rich cultural traditions.",
+  "HU": "Hungary is celebrated for its historic architecture and vibrant culture.",
+  "IS": "Iceland is known for its stunning volcanic landscapes and geothermal features.",
+  "IN": "India is renowned for its diverse cultures, vibrant traditions, and rich history.",
+  "ID": "Indonesia is famous for its beautiful islands, diverse cultures, and vibrant marine life.",
+  "IR": "Iran boasts a rich history, ancient architecture, and vibrant cultural heritage.",
+  "IQ": "Iraq is known for its rich history and cultural heritage.",
+  "IE": "Ireland is famous for its lush green landscapes and rich cultural traditions.",
+  "IL": "Israel is known for its historic sites and vibrant cultural heritage.",
+  "IT": "Italy is celebrated for its rich history, art, cuisine, and beautiful landscapes.",
+  "JM": "Jamaica is known for its reggae music, beautiful beaches, and vibrant culture.",
+  "JP": "Japan is renowned for its blend of traditional and modern culture, and beautiful landscapes.",
+  "JO": "Jordan is known for its ancient history and stunning desert landscapes.",
+  "KZ": "Kazakhstan boasts vast steppes and rich cultural heritage.",
+  "KE": "Kenya is famous for its diverse wildlife and stunning natural landscapes.",
+  "KI": "Kiribati is known for its beautiful atolls and vibrant marine life.",
+  "KP": "North Korea has a unique cultural heritage and historical significance.",
+  "KR": "South Korea is renowned for its advanced technology and rich cultural traditions.",
+  "KW": "Kuwait is known for its modern architecture and rich cultural heritage.",
+  "KG": "Kyrgyzstan offers stunning mountainous landscapes and rich cultural traditions.",
+  "LA": "Laos is known for its beautiful landscapes and rich cultural heritage.",
+  "LV": "Latvia boasts beautiful natural landscapes and vibrant cultural traditions.",
+  "LB": "Lebanon is known for its rich history, vibrant culture, and beautiful landscapes.",
+  "LS": "Lesotho offers stunning mountain scenery and rich cultural traditions.",
+  "LR": "Liberia is rich in cultural heritage and natural beauty.",
+  "LY": "Libya boasts stunning desert landscapes and rich historical sites.",
+  "LI": "Liechtenstein is known for its beautiful alpine scenery and rich cultural heritage.",
+  "LT": "Lithuania is known for its beautiful landscapes and vibrant cultural traditions.",
+  "LU": "Luxembourg offers a blend of modern and historical architecture and beautiful landscapes.",
+  "MG": "Madagascar is renowned for its unique biodiversity and stunning landscapes.",
+  "MW": "Malawi is known as the 'Warm Heart of Africa' for its friendly people and beautiful landscapes.",
+  "MY": "Malaysia is famous for its diverse cultures and stunning natural beauty.",
+  "MV": "The Maldives are renowned for their beautiful islands and vibrant marine life.",
+  "ML": "Mali is rich in cultural heritage and historical significance.",
+  "MT": "Malta boasts beautiful Mediterranean landscapes and rich cultural heritage.",
+  "MH": "The Marshall Islands are known for their stunning atolls and vibrant marine life.",
+  "MR": "Mauritania offers dramatic desert landscapes and rich cultural heritage.",
+  "MU": "Mauritius is known for its beautiful beaches and diverse cultural traditions.",
+  "MX": "Mexico is renowned for its vibrant culture, rich history, and beautiful landscapes.",
+  "FM": "Micronesia boasts beautiful islands and rich cultural traditions.",
+  "MD": "Moldova is known for its beautiful landscapes and rich cultural heritage.",
+  "MC": "Monaco is famous for its luxurious lifestyle and stunning Mediterranean coastline.",
+  "MN": "Mongolia offers vast steppes and rich cultural traditions.",
+  "ME": "Montenegro is known for its stunning Adriatic coastline and beautiful landscapes.",
+  "MA": "Morocco boasts rich cultural heritage and diverse landscapes.",
+  "MZ": "Mozambique is known for its beautiful beaches and vibrant marine life.",
+  "MM": "Myanmar (Burma) is rich in cultural heritage and beautiful landscapes.",
+  "NA": "Namibia offers stunning desert landscapes and rich cultural heritage.",
+  "NR": "Nauru is known for its beautiful island landscapes and vibrant marine life.",
+  "NP": "Nepal is renowned for its majestic Himalayan mountains and rich cultural heritage.",
+  "NL": "The Netherlands is famous for its beautiful canals, tulips, and vibrant cultural heritage.",
+  "NZ": "New Zealand offers stunning natural landscapes and vibrant Maori culture.",
+  "NI": "Nicaragua is known for its beautiful lakes and rich cultural traditions.",
+  "NE": "Niger boasts dramatic desert landscapes and rich cultural heritage.",
+  "NG": "Nigeria is renowned for its vibrant culture and diverse landscapes.",
+  "NO": "Norway is famous for its stunning fjords and high quality of life.",
+  "OM": "Oman is known for its beautiful desert landscapes and rich cultural heritage.",
+  "PK": "Pakistan offers stunning mountain scenery and rich cultural traditions.",
+  "PW": "Palau is renowned for its beautiful islands and vibrant marine life.",
+  "PA": "Panama is known for its stunning canal and beautiful landscapes.",
+  "PG": "Papua New Guinea boasts diverse cultures and rich natural beauty.",
+  "PY": "Paraguay is known for its beautiful landscapes and vibrant cultural traditions.",
+  "PE": "Peru is famous for its ancient history, diverse landscapes, and rich cultural heritage.",
+  "PH": "The Philippines offers beautiful islands and rich cultural traditions.",
+  "PL": "Poland is known for its rich history, beautiful architecture, and vibrant cultural heritage.",
+  "PT": "Portugal is celebrated for its beautiful landscapes, rich history, and vibrant culture.",
+  "QA": "Qatar is known for its modern architecture and rich cultural heritage.",
+  "RO": "Romania boasts beautiful landscapes and rich cultural traditions.",
+  "RU": "Russia is renowned for its vast landscapes and rich cultural heritage.",
+  "RW": "Rwanda is known for its stunning landscapes and vibrant culture.",
+  "WS": "Samoa offers beautiful island landscapes and rich cultural traditions.",
+  "SM": "San Marino boasts beautiful medieval architecture and rich history.",
+  "ST": "São Tomé and Príncipe is known for its beautiful islands and vibrant culture.",
+  "SA": "Saudi Arabia is renowned for its rich cultural heritage and dramatic landscapes.",
+  "SN": "Senegal is known for its vibrant culture and beautiful coastlines.",
+  "RS": "Serbia boasts rich cultural traditions and beautiful landscapes.",
+  "SC": "Seychelles is famous for its stunning beaches and vibrant marine life.",
+  "SL": "Sierra Leone is known for its beautiful landscapes and rich cultural heritage.",
+  "SG": "Singapore is renowned for its modern skyline and vibrant multicultural society.",
+  "SK": "Slovakia offers beautiful landscapes and rich cultural traditions.",
+  "SI": "Slovenia is known for its stunning natural beauty and rich cultural heritage.",
+  "SB": "The Solomon Islands boast beautiful islands and vibrant marine life.",
+  "SO": "Somalia is known for its rich cultural traditions and beautiful landscapes.",
+  "ZA": "South Africa is famous for its diverse landscapes and rich cultural heritage.",
+  "ES": "Spain is renowned for its vibrant culture, rich history, and beautiful landscapes.",
+  "LK": "Sri Lanka boasts beautiful beaches and rich cultural heritage.",
+  "SD": "Sudan is known for its rich history and diverse cultures.",
+  "SR": "Suriname offers beautiful rainforests and rich cultural traditions.",
+  "SZ": "Eswatini (Swaziland) is known for its stunning landscapes and vibrant cultural heritage.",
+  "SE": "Sweden is famous for its high quality of life and beautiful natural landscapes.",
+  "CH": "Switzerland is renowned for its stunning alpine scenery and high quality of life.",
+  "SY": "Syria boasts rich cultural heritage and historical significance.",
+  "TW": "Taiwan is known for its vibrant culture and beautiful landscapes.",
+  "TJ": "Tajikistan offers stunning mountainous landscapes and rich cultural traditions.",
+  "TZ": "Tanzania is famous for its diverse wildlife and beautiful landscapes.",
+  "TH": "Thailand is renowned for its vibrant culture, beautiful beaches, and delicious cuisine.",
+  "TL": "Timor-Leste boasts beautiful beaches and rich cultural heritage.",
+  "TG": "Togo offers beautiful landscapes and vibrant cultural traditions.",
+  "TO": "Tonga is known for its beautiful islands and rich cultural heritage.",
+  "TT": "Trinidad and Tobago is famous for its vibrant culture and beautiful beaches.",
+  "TN": "Tunisia is known for its rich history and beautiful Mediterranean coastline.",
+  "TR": "Turkey is renowned for its rich history, vibrant culture, and diverse landscapes.",
+  "TM": "Turkmenistan boasts beautiful desert landscapes and rich cultural heritage.",
+  "TV": "Tuvalu offers beautiful atolls and vibrant marine life.",
+  "UG": "Uganda is known for its diverse wildlife and stunning natural beauty.",
+  "UA": "Ukraine boasts beautiful landscapes and rich cultural heritage.",
+  "AE": "The United Arab Emirates is famous for its modern architecture and vibrant culture.",
+  "GB": "The United Kingdom is renowned for its rich history, vibrant culture, and beautiful landscapes.",
+  "US": "The United States is known for its diverse landscapes and vibrant culture.",
+  "UY": "Uruguay is celebrated for its beautiful beaches and rich cultural traditions.",
+  "UZ": "Uzbekistan boasts rich cultural heritage and stunning architecture.",
+  "VU": "Vanuatu is known for its beautiful islands and vibrant marine life.",
+  "VA": "Vatican City is famous for its rich history and stunning architecture.",
+  "VE": "Venezuela offers stunning landscapes and rich cultural heritage.",
+  "VN": "Vietnam is renowned for its vibrant culture, beautiful landscapes, and delicious cuisine.",
+  "YE": "Yemen boasts rich history and beautiful architecture.",
+  "ZM": "Zambia is known for its stunning landscapes and diverse wildlife.",
+  "ZW": "Zimbabwe offers beautiful natural landscapes and rich cultural heritage."
+};
+
 const countryCodeMap = Object.fromEntries(
   Object.entries(countryNameMap).map(([code, name]) => [name, code])
 );
@@ -430,6 +629,38 @@ async function getMapByCountryCode(countryCode) {
   catch(error){
     console.error("issue getting map")
   }
+}
+
+
+function constructCarouselData() {
+  const keys = Object.keys(countryMap);
+  
+  // Generate 3 random unique indices
+  const indices = [];
+  while (indices.length < 3) {
+    const index = Math.floor(Math.random() * keys.length);
+    if (!indices.includes(index)) {
+      indices.push(index);
+    }
+  }
+
+  const urls = [];
+  const names = [];
+  const summaries = [];
+
+  indices.forEach(index => {
+    const countryCode = keys[index];
+    urls.push(countryCode);  // Store the uppercase country code
+    names.push(countryNameMap[countryCode]);  // Store the country name
+    summaries.push(countrySummaryMap[countryCode]);  // Store the country summary
+  });
+
+  // Pack the data into a return JSON object
+  return {
+    urls: urls,
+    names: names,
+    summaries: summaries
+  };
 }
 
 function constructCountryData(requestedData) {
@@ -475,5 +706,6 @@ module.exports = {
   getMapByCountryCode,
   getCapitalCity,
   constructCountryData,
+  constructCarouselData,
   getSVGByCountryName
 };

@@ -48,6 +48,18 @@ router.get('/map/getByCountry/:country', async (req, res) => {
     }
 });
 
+router.get('/getCarousel', async (req, res) => {
+    console.log("requested carousel data");
+    try{
+        const carouselResponseData = mapService.constructCarouselData();
+        console.log(carouselResponseData);
+        res.json(carouselResponseData);
+    }
+    catch(error) {
+        console.error("Error fetching carousel data: ", error);
+        res.status(500).json({error: "Error fetching carousel data: "});
+    }
+});
 
 router.get('/map/city/:countryName', async (req, res) => {
     const { countryName } = req.params;
