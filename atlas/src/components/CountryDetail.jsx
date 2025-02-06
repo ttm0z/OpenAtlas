@@ -243,7 +243,7 @@ function CountryDetail() {
       <a href={countryData.content_urls.desktop.page} target="_blank" rel="noopener noreferrer">Read more on Wikipedia</a>
     </div>
     <div>
-    <InteractiveMap country = {countryCode}/>
+    <InteractiveMap country = {countryCode.toLowerCase()}/>
     </div>
     </>
   );

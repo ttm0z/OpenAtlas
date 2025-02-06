@@ -9,7 +9,7 @@ const InteractiveMap = () => {
 
   useEffect(() => {
     // Fetch SVG data from backend
-    fetch(`http://localhost:3001/maps/${countryCode}.svg`)
+    fetch(`http://localhost:3001/maps/${countryCode.toLowerCase()}.svg`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch SVG data');
@@ -25,21 +25,16 @@ const InteractiveMap = () => {
       .catch(error => {
         console.error('Error fetching SVG data:', error);
       });
-  }, []);
-
-  const onChange = () => {
-    console.log("changed");
-  };
+  }, [countryCode]);
 
   const handleClick = (event) => {
     // Handle click on map region
     const regionName = event.target.getAttribute('data-region');
-    // Show tooltip or perform other actions
     console.log('Clicked region:', regionName);
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: '#ffffff', padding: '20px', display: 'inline-block' }}>
       {svgData ? (
         <ReactSVGPanZoom
           width={600}
@@ -47,13 +42,9 @@ const InteractiveMap = () => {
           tool={TOOL_AUTO}
           value={value}
           onChangeValue={setValue}
-          SVGBackground="#f0f0f0"
-          onChangeTool={onChange}
-          onZoom={() => console.log("zoom")}
-          onPan={() => console.log("pan")}
           onClick={handleClick}
         >
-          <ReactSVGPanZoom.SVG width={600} height={600} style={{ background: '#f0f0f0' }}>
+          <ReactSVGPanZoom.SVG>
             <g dangerouslySetInnerHTML={{ __html: svgData }} />
           </ReactSVGPanZoom.SVG>
         </ReactSVGPanZoom>

@@ -19,7 +19,7 @@ function Home(){
             return response.json();
         })
         .then(data => {
-          setImageUrls(data.urls);
+          setImageUrls(data.urls.map(url => url.toLowerCase()));
           setImageNames(data.names);
           setImageData(data.summaries);
         })
